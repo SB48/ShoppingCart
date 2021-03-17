@@ -8,7 +8,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
-public class ShoppingShould {
+public class ShoppingTest {
     @Mock ShoppingBasketService cart;
     @Mock UserID userID;
     @Mock ProductID productID;
