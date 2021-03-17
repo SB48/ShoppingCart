@@ -17,7 +17,7 @@ public class ShoppingTest {
     public void purchase_unit(){
         cart.addItem(userID, productID, 1);
         var content = cart.checkContent();
-        assertEquals("userID", content);
+        assertEquals("userID", "content");
     }
 
     @Test
