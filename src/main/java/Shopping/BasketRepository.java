@@ -36,15 +36,16 @@ public class BasketRepository {
         basket.put(product.productID.simpleID, productLine);
     }
 
-    private Product getProduct(ProductID productID){
-        ProductRepository productInformation = new ProductRepository();
-        return productInformation.getProduct(productID);
-    }
+//    private Product getProduct(ProductID productID){
+//        ProductRepository productInformation = new ProductRepository();
+//        return productInformation.getProduct(productID);
+//    }
 
 
     private Double getProductPriceTimesQuantity(Product product, int quantity) {
         Double priceUnFormatted = product.price * quantity;
-        DecimalFormat decimal = new DecimalFormat("###0.00");
+        System.out.println(priceUnFormatted);
+        DecimalFormat decimal = new DecimalFormat("#.00");
         Double price = Double.valueOf(decimal.format(priceUnFormatted));
         return price;
     }

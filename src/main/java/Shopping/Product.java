@@ -6,8 +6,8 @@ import static java.lang.Math.round;
 
 public class Product {
     ProductID productID;
-    Double price;
-    String name;
+    public Double price;
+    public String name;
     Type type;
 
     public Product(String name, int price, Type type) {
