@@ -1,0 +1,30 @@
+@startuml
+
+class Shopping.Date {
++ String getDate()
+}
+class Shopping.UserID {
+}
+class Shopping.User {
++ void add(ProductID,int)
+}
+class Shopping.ProductID {
+}
+class Shopping.ShoppingBasketService {
++ void addItem(UserID,ProductID,int)
++ String[] checkContent()
++ void remove(ProductID)
++ void checkout()
+}
+class Shopping.Product {
+}
+abstract class Shopping.ID {
+~ {static} AtomicLong idCounter
+~ String uniqueID
++ {static} String createId()
+}
+
+
+Shopping.ID <|-- Shopping.UserID
+Shopping.ID <|-- Shopping.ProductID
+@enduml
